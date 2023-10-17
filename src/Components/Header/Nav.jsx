@@ -3,7 +3,7 @@ import { FaUserCircle } from "react-icons/fa";
 const Nav = () => {
   const links = (
     <>
-      <li className="text-base text-white hover:text-[#00A3D1] uppercase mr-8">
+      <li className="text-sm text-white hover:text-[#00A3D1] uppercase mr-8">
         <NavLink
           to="/"
           className={({ isActive, isPending }) =>
@@ -17,7 +17,7 @@ const Nav = () => {
           Home
         </NavLink>
       </li>
-      <li className="text-base text-white hover:text-[#00A3D1] uppercase mr-8">
+      <li className="text-sm text-white hover:text-[#00A3D1] uppercase mr-8">
         <NavLink
           to="/addProduct"
           className={({ isActive, isPending }) =>
@@ -31,7 +31,7 @@ const Nav = () => {
           Add Product
         </NavLink>
       </li>
-      <li className="text-base text-white hover:text-[#00A3D1] uppercase mr-8">
+      <li className="text-sm text-white hover:text-[#00A3D1] uppercase mr-8">
         <NavLink
           to="/myCart"
           className={({ isActive, isPending }) =>
@@ -45,7 +45,7 @@ const Nav = () => {
           My Cart
         </NavLink>
       </li>
-      <li className="text-base text-white hover:text-[#00A3D1] uppercase mr-8">
+      <li className="text-sm text-white hover:text-[#00A3D1] uppercase mr-8">
         <NavLink
           to="/register"
           className={({ isActive, isPending }) =>
@@ -59,7 +59,7 @@ const Nav = () => {
           Register
         </NavLink>
       </li>
-      <li className="text-base text-white hover:text-[#00A3D1] uppercase mr-8">
+      <li className="text-sm text-white hover:text-[#00A3D1] uppercase mr-8">
         <NavLink
           to="/login"
           className={({ isActive, isPending }) =>
