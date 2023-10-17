@@ -3,70 +3,70 @@ import { FaUserCircle } from "react-icons/fa";
 const Nav = () => {
   const links = (
     <>
-      <li className="text-lg text-white hover:text-white mr-8">
+      <li className="text-base text-white hover:text-[#00A3D1] uppercase mr-8">
         <NavLink
           to="/"
           className={({ isActive, isPending }) =>
             isPending
               ? "pending"
               : isActive
-              ? "text-white underline font-bold"
+              ? "text-[#00A3D1] underline font-bold"
               : ""
           }
         >
           Home
         </NavLink>
       </li>
-      <li className="text-lg text-white mr-8">
+      <li className="text-base text-white hover:text-[#00A3D1] uppercase mr-8">
         <NavLink
           to="/addProduct"
           className={({ isActive, isPending }) =>
             isPending
               ? "pending"
               : isActive
-              ? "text-white underline font-bold"
+              ? "text-[#00A3D1] underline font-bold"
               : ""
           }
         >
           Add Product
         </NavLink>
       </li>
-      <li className="text-lg text-white mr-8">
+      <li className="text-base text-white hover:text-[#00A3D1] uppercase mr-8">
         <NavLink
           to="/myCart"
           className={({ isActive, isPending }) =>
             isPending
               ? "pending"
               : isActive
-              ? "text-white underline font-bold"
+              ? "text-[#00A3D1] underline font-bold"
               : ""
           }
         >
           My Cart
         </NavLink>
       </li>
-      <li className="text-lg text-white mr-8">
+      <li className="text-base text-white hover:text-[#00A3D1] uppercase mr-8">
         <NavLink
           to="/register"
           className={({ isActive, isPending }) =>
             isPending
               ? "pending"
               : isActive
-              ? "text-white underline font-bold"
+              ? "text-[#00A3D1] underline font-bold"
               : ""
           }
         >
           Register
         </NavLink>
       </li>
-      <li className="text-lg text-white mr-8">
+      <li className="text-base text-white hover:text-[#00A3D1] uppercase mr-8">
         <NavLink
           to="/login"
           className={({ isActive, isPending }) =>
             isPending
               ? "pending"
               : isActive
-              ? "text-white underline font-bold"
+              ? "text-[#00A3D1] underline font-bold"
               : ""
           }
         >
@@ -115,9 +115,11 @@ const Nav = () => {
           <ul className=" menu-horizontal px-1 hover:text-white">{links}</ul>
         </div>
         <div className="navbar-end">
-          <button className="">
-            <FaUserCircle className="text-white text-3xl" />
-          </button>
+          <Link to="/login">
+            <button className="">
+              <FaUserCircle className="text-white text-3xl hover:text-[#00A3D1] hover:bg-white hover:border hover:border-white hover:rounded-full" />
+            </button>
+          </Link>
         </div>
       </div>
     </div>
