@@ -1,8 +1,8 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Rating } from "@material-tailwind/react";
 const BrandProducts = ({ product }) => {
-  const { imgUrl, name, brandName, price, type, rating } = product;
-
+  const { _id, imgUrl, name, brandName, price, type, rating } = product;
+  const ratingInt = parseInt(rating);
   const { brand } = useParams();
 
   return (
@@ -24,24 +24,28 @@ const BrandProducts = ({ product }) => {
             <h5>{brandName}</h5>
             <h5>{type}</h5>
             <div>
-              <Rating value={rating} />
+              <Rating value={ratingInt} />
             </div>
           </div>
           <div className="p-6 pt-0">
-            <button
-              className="block w-full select-none rounded-lg bg-blue-gray-900/10 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-blue-gray-900 transition-all hover:scale-105 focus:scale-105 focus:opacity-[0.85] active:scale-100 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-              type="button"
-            >
-              See Details
-            </button>
+            <Link to={`/productDetails/${_id}`}>
+              <button
+                className="block w-full select-none rounded-lg bg-blue-gray-900/10 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-blue-gray-900 transition-all hover:scale-105 focus:scale-105 focus:opacity-[0.85] active:scale-100 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                type="button"
+              >
+                See Details
+              </button>
+            </Link>
           </div>
           <div className="p-6 pt-0">
-            <button
-              className="block w-full select-none rounded-lg bg-blue-gray-900/10 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-blue-gray-900 transition-all hover:scale-105 focus:scale-105 focus:opacity-[0.85] active:scale-100 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-              type="button"
-            >
-              Update Product
-            </button>
+            <Link>
+              <button
+                className="block w-full select-none rounded-lg bg-blue-gray-900/10 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-blue-gray-900 transition-all hover:scale-105 focus:scale-105 focus:opacity-[0.85] active:scale-100 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                type="button"
+              >
+                Update Product
+              </button>
+            </Link>
           </div>
         </div>
       )}
