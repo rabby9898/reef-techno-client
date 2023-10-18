@@ -6,7 +6,31 @@ const ProductDetails = () => {
   const { _id, imgUrl, name, brandName, price, type, rating, description } =
     loadDetails;
   const ratingInt = parseInt(rating);
-  console.log(loadDetails._id);
+
+  //   backend
+  const handleCartClick = (_id) => {
+    fetch("http://localhost:5000/add-to-cart", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        _id,
+        imgUrl,
+        name,
+        brandName,
+        price,
+        type,
+        rating,
+        description,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        alert("Added to the cart");
+      });
+  };
   return (
     <div className="px-5 py-5 md:px-10 md:py-5 lg:px-36 lg:py-5">
       <div className="hero h-[700px]">
@@ -32,7 +56,10 @@ const ProductDetails = () => {
               </h1>
             </div>
             <div>
-              <button className="bg-[#00A3D1] px-10 py-2 rounded-md text-lg mt-16 text-white border border-[#00A3D1]">
+              <button
+                onClick={() => handleCartClick(_id)}
+                className="bg-[#00A3D1] px-10 py-2 rounded-md text-lg mt-16 text-white border border-[#00A3D1]"
+              >
                 Add To Cart
               </button>
             </div>
