@@ -1,0 +1,35 @@
+[
+    {
+      "id": 1,
+      "image": "https://i.ibb.co/2k5mSG4/apple-logo.png",
+      "name": "Apple"
+      
+    },
+    {
+      "id": 2,
+      "image": "https://i.ibb.co/Nt4twqR/microsoft-logo-png-2411.png",
+      "name": "Microsoft"
+     
+    },
+    {
+      "id": 3,
+      "image": "https://i.ibb.co/DRZmyBt/intel-png-logo-4119.png",
+      "name": "Intel"
+    },
+    {
+      "id": 4,
+      "image": "https://i.ibb.co/99dr3wQ/red-logo-png-1149.png",
+      "name": "Lenovo"
+    },
+    {
+      "id": 5,
+      "image": "https://i.ibb.co/7vk54jn/logo-asus-png-7166.png",
+      "name": "Asus"
+    },
+    {
+      "id": 6,
+      "image": "https://i.ibb.co/rc1gFgF/samsung-logo-png-1304.png",
+      "name": "Samsung"
+    }
+  ]
+  

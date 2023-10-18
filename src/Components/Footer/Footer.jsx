@@ -50,7 +50,7 @@ const Footer = () => {
         </nav>
         <aside>
           <p className="text-white">
-            Copyright © 2023 - All right reserved by ACME Industries Ltd
+            Copyright © 2023 - All right reserved by Fajle Rabby
           </p>
         </aside>
       </footer>
