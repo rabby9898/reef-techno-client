@@ -1,0 +1,51 @@
+[
+    {
+      "id": 1,
+      "name": "Apple",
+
+    "img1": "https://i.ibb.co/b2y1ZmD/apple1.jpg",
+    "img2": "https://i.ibb.co/vYLLYbq/apple2.jpg",
+    "img3": "https://i.ibb.co/KFHS91G/apple-3.jpg"
+
+    },
+    {
+      "id": 2,
+      "name": "Microsoft",
+        "img1": "https://i.ibb.co/tssD5P8/microsoft1.png",
+        "img2": "https://i.ibb.co/YNzdVkn/micro-2.jpg",
+        "img3": "https://i.ibb.co/XCgK6hL/micro-3.jpg"
+
+    },
+    {
+      "id": 3,
+      "name": "Intel",
+        "img1": "https://i.ibb.co/kHGtvJL/intel1.jpg",
+        "img2": "https://i.ibb.co/5W94VLh/intel-2.jpg",
+        "img3": "https://i.ibb.co/nDcGLhR/jintel3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Lenovo",
+        "img1": "https://i.ibb.co/4PH1fb9/Lenovo.jpg",
+        "img2": "https://i.ibb.co/vJSVn4r/lenovo2.jpg",
+        "img3": "https://i.ibb.co/qj6QrgM/lenovo3.jpg"
+ 
+    },
+    {
+      "id": 5,
+      "name": "Asus",
+        "img1": "https://i.ibb.co/RCtnvfG/ASUS1.jpg",
+        "img2": "https://i.ibb.co/7zpwHNH/asus2.jpg",
+        "img3": "https://i.ibb.co/LNSNjfv/asus3.jpg"
+
+    },
+    {
+      "id": 6,
+      "name": "Samsung",
+        "img1": "https://i.ibb.co/TYjm5qr/samsung.jpg",
+        "img2": "https://i.ibb.co/4sYWN89/sam-2.jpg",
+        "img3": "https://i.ibb.co/SmK6C8s/sam-3.jpg"
+
+    }
+  ]
+  
