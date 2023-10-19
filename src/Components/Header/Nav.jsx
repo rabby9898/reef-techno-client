@@ -1,6 +1,19 @@
 import { Link, NavLink } from "react-router-dom";
-import { FaUserCircle } from "react-icons/fa";
+import { FaUserCircle, FaSignOutAlt } from "react-icons/fa";
+import { useContext } from "react";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+import toast from "react-hot-toast";
 const Nav = () => {
+  const { user, logOut, updatedUser } = useContext(AuthContext);
+  const handleSignOut = () => {
+    logOut()
+      .then(() => {
+        toast.success("Sign-out successful");
+      })
+      .catch((error) => {
+        toast.error(error);
+      });
+  };
   const links = (
     <>
       <li className="text-sm text-white hover:text-[#00A3D1] uppercase mr-8">
@@ -45,34 +58,38 @@ const Nav = () => {
           My Cart
         </NavLink>
       </li>
-      <li className="text-sm text-white hover:text-[#00A3D1] uppercase mr-8">
-        <NavLink
-          to="/register"
-          className={({ isActive, isPending }) =>
-            isPending
-              ? "pending"
-              : isActive
-              ? "text-[#00A3D1] underline font-bold"
-              : ""
-          }
-        >
-          Register
-        </NavLink>
-      </li>
-      <li className="text-sm text-white hover:text-[#00A3D1] uppercase mr-8">
-        <NavLink
-          to="/login"
-          className={({ isActive, isPending }) =>
-            isPending
-              ? "pending"
-              : isActive
-              ? "text-[#00A3D1] underline font-bold"
-              : ""
-          }
-        >
-          Login
-        </NavLink>
-      </li>
+      {!user && (
+        <li className="text-sm text-white hover:text-[#00A3D1] uppercase mr-8">
+          <NavLink
+            to="/register"
+            className={({ isActive, isPending }) =>
+              isPending
+                ? "pending"
+                : isActive
+                ? "text-[#00A3D1] underline font-bold"
+                : ""
+            }
+          >
+            Register
+          </NavLink>
+        </li>
+      )}
+      {!user && (
+        <li className="text-sm text-white hover:text-[#00A3D1] uppercase mr-8">
+          <NavLink
+            to="/login"
+            className={({ isActive, isPending }) =>
+              isPending
+                ? "pending"
+                : isActive
+                ? "text-[#00A3D1] underline font-bold"
+                : ""
+            }
+          >
+            Login
+          </NavLink>
+        </li>
+      )}
     </>
   );
   return (
@@ -115,11 +132,42 @@ const Nav = () => {
           <ul className=" menu-horizontal px-1 hover:text-white">{links}</ul>
         </div>
         <div className="navbar-end">
-          <Link to="/login">
+          <div className="mr-8">
+            {user ? (
+              <div className="flex flex-col-reverse lg:flex-row justify-between items-center gap-2">
+                <p className="w-max text-sm md:text-base text-white">
+                  {user.displayName}
+                </p>
+                <label tabIndex="0" className="btn btn-ghost btn-circle avatar">
+                  <div className="w-10 rounded-full">
+                    <img src={user.photoURL || updatedUser} />
+                  </div>
+                </label>
+              </div>
+            ) : (
+              <FaUserCircle className="text-white text-3xl hover:text-[#00A3D1] hover:bg-white hover:border hover:border-white hover:rounded-full"></FaUserCircle>
+            )}
+          </div>
+          {user ? (
+            <Link
+              onClick={handleSignOut}
+              className="text-base text-white font-medium uppercase"
+            >
+              <FaSignOutAlt className="text-white text-3xl hover:text-[#00A3D1] hover:rounded-full" />
+            </Link>
+          ) : (
+            <Link
+              to="/login"
+              className="text-base text-white font-medium uppercase"
+            >
+              Login
+            </Link>
+          )}
+          {/* <Link to="/login">
             <button className="">
               <FaUserCircle className="text-white text-3xl hover:text-[#00A3D1] hover:bg-white hover:border hover:border-white hover:rounded-full" />
             </button>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>
