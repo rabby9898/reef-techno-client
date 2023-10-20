@@ -1,5 +1,6 @@
 import { Rating } from "@material-tailwind/react";
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const ProductDetails = () => {
   const loadDetails = useLoaderData();
@@ -28,7 +29,13 @@ const ProductDetails = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        alert("Added to the cart");
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Your Product Added To Your Cart",
+          showConfirmButton: false,
+          timer: 1500,
+        });
       });
   };
   return (
