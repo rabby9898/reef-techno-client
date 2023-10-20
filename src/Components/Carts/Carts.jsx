@@ -14,9 +14,12 @@ const Carts = ({ cart, carts, setCarts }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/add-to-cart/${_id}`, {
-          method: "DELETE",
-        })
+        fetch(
+          `https://reeftech-server-h7d6u6kgy-fajle-rabbys-projects.vercel.app/add-to-cart/${_id}`,
+          {
+            method: "DELETE",
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             console.log(data);

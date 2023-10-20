@@ -37,7 +37,10 @@ const router = createBrowserRouter([
             <MyCart></MyCart>
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:5000/add-to-cart"),
+        loader: () =>
+          fetch(
+            "https://reeftech-server-h7d6u6kgy-fajle-rabbys-projects.vercel.app/add-to-cart"
+          ),
       },
       {
         path: "/register",
@@ -50,7 +53,10 @@ const router = createBrowserRouter([
       {
         path: "/brandProducts/:brand",
         element: <BrandProduct></BrandProduct>,
-        loader: () => fetch(`http://localhost:5000/products`),
+        loader: () =>
+          fetch(
+            `https://reeftech-server-h7d6u6kgy-fajle-rabbys-projects.vercel.app/products`
+          ),
       },
       {
         path: "/productDetails/:id",
@@ -60,7 +66,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/products/${params.id}`),
+          fetch(
+            `https://reeftech-server-h7d6u6kgy-fajle-rabbys-projects.vercel.app/products/${params.id}`
+          ),
       },
       {
         path: "/updateForm/:id",
@@ -70,7 +78,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/products/${params.id}`),
+          fetch(
+            `https://reeftech-server-h7d6u6kgy-fajle-rabbys-projects.vercel.app/products/${params.id}`
+          ),
       },
     ],
   },

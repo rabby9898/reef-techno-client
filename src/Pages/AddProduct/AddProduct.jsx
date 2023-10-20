@@ -23,13 +23,16 @@ const AddProduct = () => {
       rating,
     };
 
-    fetch("http://localhost:5000/products", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(products),
-    })
+    fetch(
+      "https://reeftech-server-h7d6u6kgy-fajle-rabbys-projects.vercel.app/products",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(products),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

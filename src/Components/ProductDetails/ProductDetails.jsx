@@ -10,22 +10,25 @@ const ProductDetails = () => {
 
   //   backend
   const handleCartClick = (_id) => {
-    fetch("http://localhost:5000/add-to-cart", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify({
-        _id,
-        imgUrl,
-        name,
-        brandName,
-        price,
-        type,
-        rating,
-        description,
-      }),
-    })
+    fetch(
+      "https://reeftech-server-h7d6u6kgy-fajle-rabbys-projects.vercel.app/add-to-cart",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify({
+          _id,
+          imgUrl,
+          name,
+          brandName,
+          price,
+          type,
+          rating,
+          description,
+        }),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

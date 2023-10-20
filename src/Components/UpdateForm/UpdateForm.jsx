@@ -27,13 +27,16 @@ const UpdateForm = () => {
       rating,
     };
 
-    fetch(`http://localhost:5000/products/${_id}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(updateProducts),
-    })
+    fetch(
+      `https://reeftech-server-h7d6u6kgy-fajle-rabbys-projects.vercel.app/products/${_id}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(updateProducts),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
