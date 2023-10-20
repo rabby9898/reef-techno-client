@@ -13,16 +13,16 @@ const Banner = () => {
           <div className="hero-overlay bg-opacity-60"></div>
           <div className="hero-content text-center text-neutral-content">
             <div className="">
-              <h1 className="mb-8 text-3xl text-white bg-black font-bold uppercase ">
+              <h1 className="mb-8 text-xl md:text-3xl text-white bg-black font-bold uppercase ">
                 Cyber Friday
               </h1>
-              <h1 className="mb-3 text-9xl  text-[#00A3D1] font-extrabold uppercase">
+              <h1 className="mb-3 text-4xl md:text-9xl  text-[#00A3D1] font-extrabold uppercase">
                 Special Sale!
               </h1>
               <h1 className="mb-3 text-sm  text-white font-extrabold uppercase">
                 up to
               </h1>
-              <h1 className="mb-3 text-7xl text-white font-extrabold uppercase">
+              <h1 className="mb-3 text-xl md:text-4xl text-white font-extrabold uppercase">
                 50% Discount
               </h1>
 
@@ -42,13 +42,13 @@ const Banner = () => {
           <div className="hero-overlay bg-opacity-60"></div>
           <div className="hero-content text-center text-neutral-content">
             <div className="">
-              <h1 className="mb-8 text-3xl text-white bg-black font-bold uppercase ">
+              <h1 className="mb-8 text-xl md:text-3xl text-white bg-black font-bold uppercase ">
                 Cyber Friday
               </h1>
-              <h1 className="mb-3 text-9xl  text-[#00A3D1] font-extrabold uppercase">
+              <h1 className="mb-3 text-4xl md:text-9xl  text-[#00A3D1] font-extrabold uppercase">
                 Limited Discount
               </h1>
-              <h1 className="mb-3 text-7xl text-white font-extrabold uppercase">
+              <h1 className="mb-3 text-xl md:text-4xl text-white font-extrabold uppercase">
                 special product
               </h1>
 
@@ -68,16 +68,16 @@ const Banner = () => {
           <div className="hero-overlay bg-opacity-60"></div>
           <div className="hero-content text-center text-neutral-content">
             <div className="">
-              <h1 className="mb-8 text-3xl text-white bg-black font-bold uppercase ">
+              <h1 className="mb-8 text-xl md:text-3xl text-white bg-black font-bold uppercase ">
                 Cyber Friday
               </h1>
-              <h1 className="mb-3 text-9xl  text-[#00A3D1] font-extrabold uppercase">
+              <h1 className="mb-3 text-4xl md:text-9xl  text-[#00A3D1] font-extrabold uppercase">
                 new product
               </h1>
-              <h1 className="mb-3 text-4xl  text-white font-extrabold uppercase">
+              <h1 className="mb-3 text-xl md:text-4xl  text-white font-extrabold uppercase">
                 2023
               </h1>
-              <h1 className="mb-3 text-7xl text-white font-extrabold uppercase">
+              <h1 className="mb-3 text-xl md:text-7xl text-white font-extrabold uppercase">
                 future experience
               </h1>
 

@@ -5,7 +5,7 @@ const BrandProduct = () => {
   const loadProducts = useLoaderData();
 
   return (
-    <>
+    <div>
       <div>
         <div className="carousel w-full h-[600px]">
           <div id="item1" className="carousel-item w-full">
@@ -37,15 +37,23 @@ const BrandProduct = () => {
         </div>
       </div>
       <div className="px-5 py-5 md:px-10 md:py-5 lg:px-36 lg:py-5">
-        {loadProducts.length > 0 ? (
-          loadProducts.map((product) => (
-            <BrandProducts key={product._id} product={product}></BrandProducts>
-          ))
+        {loadProducts.length > 1 ? (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {loadProducts.map((product) => (
+              <BrandProducts
+                key={product._id}
+                product={product}
+              ></BrandProducts>
+            ))}
+          </div>
         ) : (
-          <p>No product found</p>
+          <>
+            <img src="https://i.ibb.co/84TghjL/no-product-found.png" alt="" />
+            <h1>Hey</h1>
+          </>
         )}
       </div>
-    </>
+    </div>
   );
 };
 

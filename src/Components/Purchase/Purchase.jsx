@@ -8,7 +8,7 @@ const Purchase = () => {
     <>
       <div className="px-5 py-5 md:px-10 md:py-5 lg:px-36 lg:py-5">
         <div className="mx-auto my-20 text-center">
-          <h1 className="text-6xl text-black font-semibold">
+          <h1 className="text-3xl md:text-6xl text-black font-semibold">
             Purchase From Our{" "}
             <span className="text-[#00A3D1] font-light">Trusted Brands</span>
           </h1>

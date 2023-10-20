@@ -76,7 +76,7 @@ const Register = () => {
   return (
     <div className="px-5 md:px-10 lg:px-36 py-5 md:py-10">
       <div className="flex justify-center mx-auto">
-        <div className="border border-black p-8 md:p-28 bg-black rounded-xl shadow-2xl shadow-black">
+        <div className="border border-black p-1 md:p-28 bg-black rounded-xl shadow-2xl shadow-black">
           <div className="relative flex flex-col rounded-xl bg-transparent bg-clip-border text-white shadow-none">
             <h4 className="block font-sans text-3xl font-semibold leading-snug tracking-normal text-white antialiased">
               Create your account.
