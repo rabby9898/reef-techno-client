@@ -3,9 +3,9 @@ import BrandProducts from "../BrandProducts/BrandProducts";
 
 const BrandProduct = () => {
   const loadProducts = useLoaderData();
-  console.log(loadProducts);
+
   return (
-    <div>
+    <>
       <div>
         <div className="carousel w-full h-[600px]">
           <div id="item1" className="carousel-item w-full">
@@ -38,21 +38,14 @@ const BrandProduct = () => {
       </div>
       <div className="px-5 py-5 md:px-10 md:py-5 lg:px-36 lg:py-5">
         {loadProducts.length > 0 ? (
-          <div className="grid grid-cols-3 gap-5">
-            {loadProducts.map((product) => (
-              <BrandProducts
-                key={product._id}
-                product={product}
-              ></BrandProducts>
-            ))}
-          </div>
+          loadProducts.map((product) => (
+            <BrandProducts key={product._id} product={product}></BrandProducts>
+          ))
         ) : (
-          <h1 className="text-center text-5xl font-bold text-red-500 ">
-            No Products Available
-          </h1>
+          <p>No product found</p>
         )}
       </div>
-    </div>
+    </>
   );
 };
 

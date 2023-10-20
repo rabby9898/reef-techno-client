@@ -6,7 +6,7 @@ export default function ErrorPage() {
 
   return (
     <>
-      <div className="text-center my-8 md:my-40" id="error-page">
+      <div className="text-center flex justify-center" id="error-page">
         <img src="https://i.ibb.co/VMqKt9t/404-error-with-tired-person-concept-illustration-114360-7899.jpg" />
       </div>
     </>
