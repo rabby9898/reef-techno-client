@@ -1,20 +1,33 @@
+import Swal from "sweetalert2";
+
 const Carts = ({ cart, carts, setCarts }) => {
   const { _id, name, imgUrl, brandName, price, description } = cart;
   // backend delete
   const handleDelete = (_id) => {
-    console.log("clicked!!");
-    fetch(`http://localhost:5000/add-to-cart/${_id}`, {
-      method: "DELETE",
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        if (data.deletedCount > 0) {
-          console.log("deleted");
-          const remaining = carts.filter((pd) => pd._id !== _id);
-          setCarts(remaining);
-        }
-      });
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/add-to-cart/${_id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            if (data.deletedCount > 0) {
+              Swal.fire("Deleted!", "Your Coffee has been deleted.", "success");
+              const remaining = carts.filter((pd) => pd._id !== _id);
+              setCarts(remaining);
+            }
+          });
+      }
+    });
   };
   return (
     <div>

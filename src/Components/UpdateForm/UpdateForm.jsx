@@ -1,4 +1,5 @@
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const UpdateForm = () => {
   const loaderProducts = useLoaderData();
@@ -36,7 +37,12 @@ const UpdateForm = () => {
       .then((data) => {
         console.log(data);
         if (data.modifiedCount > 0) {
-          alert("Products Updated");
+          Swal.fire({
+            title: "Success!",
+            text: "Your Product Updated Successfully",
+            icon: "success",
+            confirmButtonText: "Cool",
+          });
         }
       });
   };
