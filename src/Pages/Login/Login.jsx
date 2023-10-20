@@ -56,7 +56,7 @@ const Login = () => {
               <div className="mb-4 flex flex-col gap-6">
                 <div className="relative h-11 w-full min-w-[200px]">
                   <input
-                    className="peer h-full w-full rounded-md border border-white border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-white outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:text-white focus:border-2 focus:border-[#00A3D1] focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                    className="peer h-full w-full rounded-md border border-white border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-white outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-white placeholder-shown:text-white focus:border-2 focus:border-[#00A3D1] focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                     placeholder=" "
                     name="email"
                   />
