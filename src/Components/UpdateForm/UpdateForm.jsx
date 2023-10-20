@@ -1,7 +1,8 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const UpdateForm = () => {
+  const navigate = useNavigate();
   const loaderProducts = useLoaderData();
   const { _id, imgUrl, name, brandName, price, type, description, rating } =
     loaderProducts;
@@ -43,6 +44,7 @@ const UpdateForm = () => {
             icon: "success",
             confirmButtonText: "Cool",
           });
+          navigate("/");
         }
       });
   };

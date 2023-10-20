@@ -1,6 +1,8 @@
+import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const AddProduct = () => {
+  const navigate = useNavigate();
   const handleAddProduct = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -31,12 +33,15 @@ const AddProduct = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        Swal.fire({
-          title: "Success!",
-          text: "Your Product Added Successfully",
-          icon: "success",
-          confirmButtonText: "Cool",
-        });
+        if (data.insertedId) {
+          Swal.fire({
+            title: "Success!",
+            text: "Your Product Added Successfully",
+            icon: "success",
+            confirmButtonText: "Cool",
+          });
+        }
+        navigate("/");
       });
   };
   return (
