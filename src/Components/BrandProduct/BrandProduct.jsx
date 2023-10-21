@@ -10,18 +10,21 @@ const BrandProduct = () => {
         <div className="carousel w-full h-[600px]">
           <div id="item1" className="carousel-item w-full">
             <img
-              src="https://i.ibb.co/TYjm5qr/samsung.jpg"
+              src="https://i.ibb.co/gmS9s59/big-sale-discounts-products.jpg"
               className="w-full"
             />
           </div>
           <div id="item2" className="carousel-item w-full">
             <img
-              src="https://i.ibb.co/tssD5P8/microsoft1.png"
+              src="https://i.ibb.co/CKN2VYV/abstract-colorful-sales-banner-23-2148345455.jpg"
               className="w-full"
             />
           </div>
           <div id="item3" className="carousel-item w-full">
-            <img src="https://i.ibb.co/vYLLYbq/apple2.jpg" className="w-full" />
+            <img
+              src="https://i.ibb.co/VSJ3S4y/discount-dslr-camera-podium.jpg"
+              className="w-full"
+            />
           </div>
         </div>
         <div className="flex justify-center w-full py-2 gap-2">
