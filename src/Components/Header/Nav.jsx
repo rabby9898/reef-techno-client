@@ -139,7 +139,7 @@ const Nav = () => {
             <ul className=" menu-horizontal px-1 hover:text-white">{links}</ul>
           </div>
           <div className="navbar-end">
-            <div className="mr-0 md:mr-8 mt-1">
+            <div className="mr-3 md:mr-8 mt-1">
               <label className="swap swap-rotate">
                 {/* this hidden checkbox controls the state */}
                 <input type="checkbox" onClick={toggleDarkMode} />
