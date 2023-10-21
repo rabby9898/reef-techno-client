@@ -50,6 +50,14 @@ const router = createBrowserRouter([
         path: "/login",
         element: <Login></Login>,
       },
+      // {
+      //   path: "/brandProducts/:brand",
+      //   element: <BrandProduct></BrandProduct>,
+      //   loader: () =>
+      //     fetch(
+      //       `https://reeftech-server-h7d6u6kgy-fajle-rabbys-projects.vercel.app/products`
+      //     ),
+      // },
       {
         path: "/brandProducts/:brand",
         element: <BrandProduct></BrandProduct>,

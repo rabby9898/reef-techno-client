@@ -44,7 +44,7 @@ const ProductDetails = () => {
   return (
     <div className="px-5 py-5 md:px-10 md:py-5 lg:px-36 lg:py-5">
       <div className="hero h-full md:h-[700px]">
-        <div className="hero-content flex-col lg:flex-row-reverse gap-20">
+        <div className="hero-content flex-col lg:flex-row-reverse gap-5 md:gap-10 lg:gap-20">
           <div className="w-full text-center lg:text-left">
             <h1 className="text-4xl font-bold mt-8">{name}</h1>
             <p className="text-lg mt-8 ">

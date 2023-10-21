@@ -36,23 +36,23 @@ const BrandProduct = () => {
           </a>
         </div>
       </div>
-      <div className="px-5 py-5 md:px-10 md:py-5 lg:px-36 lg:py-5">
-        {loadProducts.length > 1 ? (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {loadProducts.map((product) => (
-              <BrandProducts
-                key={product._id}
-                product={product}
-              ></BrandProducts>
-            ))}
-          </div>
-        ) : (
-          <>
-            <img src="https://i.ibb.co/84TghjL/no-product-found.png" alt="" />
-            <h1>Hey</h1>
-          </>
-        )}
-      </div>
+
+      {loadProducts.length > 0 ? (
+        <div className="px-5 py-5 md:px-10 md:py-5 lg:px-36 lg:py-5">
+          {
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+              {loadProducts.map((product) => (
+                <BrandProducts
+                  key={product._id}
+                  product={product}
+                ></BrandProducts>
+              ))}
+            </div>
+          }
+        </div>
+      ) : (
+        <h1>NO Data Found</h1>
+      )}
     </div>
   );
 };

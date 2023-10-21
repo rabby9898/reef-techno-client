@@ -51,7 +51,7 @@ const Login = () => {
 
             <form
               onSubmit={handleSignIn}
-              className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96"
+              className="mt-8 mb-2 w-[18rem] md:w-80 max-w-screen-lg sm:w-96"
             >
               <div className="mb-4 flex flex-col gap-6">
                 <div className="relative h-11 w-full min-w-[200px]">

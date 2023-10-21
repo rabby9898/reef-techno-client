@@ -1,11 +1,13 @@
 import { useLoaderData } from "react-router-dom";
 import Brands from "../Brand/Brands";
+import { useContext } from "react";
+import { ModeContext } from "../../DarkModeProvider/DarkModeProvider";
 
 const Purchase = () => {
   const brands = useLoaderData();
-
+  const { isDarkMode } = useContext(ModeContext);
   return (
-    <>
+    <div className={`purchase ${isDarkMode ? "dark-mode" : ""}`}>
       <div className="px-5 py-5 md:px-10 md:py-5 lg:px-36 lg:py-5">
         <div className="mx-auto my-20 text-center">
           <h1 className="text-3xl md:text-6xl text-black font-semibold">
@@ -19,7 +21,7 @@ const Purchase = () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
